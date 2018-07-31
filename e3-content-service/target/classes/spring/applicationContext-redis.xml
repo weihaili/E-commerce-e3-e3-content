@@ -11,20 +11,20 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 	
 	<!-- redis single version -->
-	<!-- <bean id="jedisClientPool" class="cn.kkl.mall.service.impl.JedisClientPool">
+	<bean id="jedisClientPool" class="cn.kkl.mall.service.impl.JedisClientPool">
 		<property name="jedisPool" ref="jedisPool"></property>
 	</bean>
 	
 	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
-		<constructor-arg name="host" value="${redis_server_ip}"></constructor-arg>
-		<constructor-arg name="port" value="${redis_server_port}"></constructor-arg>
+		<!-- <constructor-arg name="host" value="${redis_server_ip}"></constructor-arg>
+		<constructor-arg name="port" value="${redis_server_port}"></constructor-arg> -->
 		
 		<constructor-arg name="host" value="192.168.25.133"></constructor-arg>
 		<constructor-arg name="port" value="6379"></constructor-arg>
-	</bean> -->
+	</bean>
 	
 	<!-- redisCluster version configuration -->
-	<bean id="jedisClientCluster" class="cn.kkl.mall.service.impl.JedisClientCluster">
+	<!-- <bean id="jedisClientCluster" class="cn.kkl.mall.service.impl.JedisClientCluster">
 		<property name="jedisCluster" ref="jedisCluster"></property>
 	</bean>
 	
@@ -57,5 +57,5 @@
 				</bean>
 			</set>
 		</constructor-arg>
-	</bean>
+	</bean> -->
 </beans>
